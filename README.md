@@ -1,4 +1,8 @@
 Credit Card Analysis
+Download data from this link "https://www.kaggle.com/datasets/priyamchoksi/credit-card-transactions-dataset" and then create a new folder "data" and place the data file in the folder
+
+Then run this command "python scripts/clean_transactions.py"
+Then run this command "python scripts/load_to_sql.py"
 
 Power Query
 1 - credit_card_for_power_bi
