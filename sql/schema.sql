@@ -1,8 +1,4 @@
--- Credit Card Transactions: table definitions (reference)
--- SQLite creates these automatically when loading via load_to_sql.py.
--- Use this for SQL Server / PostgreSQL if you load data there.
 
--- Main fact table (one row per transaction)
 CREATE TABLE IF NOT EXISTS transactions (
     trans_datetime  DATETIME,
     year            INTEGER,
@@ -30,7 +26,7 @@ CREATE TABLE IF NOT EXISTS transactions (
     merch_zipcode   INTEGER
 );
 
--- Pre-aggregated: one row per month
+
 CREATE TABLE IF NOT EXISTS monthly_trends (
     year_month         TEXT,
     total_spend         REAL,
@@ -40,7 +36,7 @@ CREATE TABLE IF NOT EXISTS monthly_trends (
     fraud_rate_pct      REAL
 );
 
--- Pre-aggregated: one row per city
+
 CREATE TABLE IF NOT EXISTS spend_by_city (
     city              TEXT,
     state             TEXT,
@@ -50,7 +46,7 @@ CREATE TABLE IF NOT EXISTS spend_by_city (
     transaction_count INTEGER
 );
 
--- Pre-aggregated: one row per category
+
 CREATE TABLE IF NOT EXISTS spend_by_category (
     category_display   TEXT,
     category           TEXT,
